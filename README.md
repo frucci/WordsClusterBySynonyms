@@ -26,7 +26,7 @@ verbs = [
 verbs = pd.DataFrame(verbs)
 verbs.columns = ['verbs']
 ```
-WordsClusterBySynonyms requires a dataframe in which you have to specify the name of the target column and the languages obviously.
+WordsClusterBySynonyms requires a dataframe in which you have to specify the name of the target column and the language obviously.
 
 The first function inside **WordClusterBySynonyms** is **get_synonyms_pandas**. It applies on the dataframe the generation of synonyms by creating a new columns.
 
@@ -46,7 +46,7 @@ Using set_treshold you can repeat **get_synonyms_pandas** with a threshold
 ```python
 df = wc.set_treshold(20, df)
 ```
-Using **plot_hist** you can check if in your list of words there are words with associate a huge number of synonyms. There words are a problem, because of our definition of distance they tend to create few huge cluster.
+Using **plot_hist** you can check if in your list of words there are words with associate a huge number of synonyms. These words are a problem, because of our definition of distance they tend to create few huge cluster.
 
 ```python
 wc.plot_hist(df)
@@ -76,7 +76,8 @@ wc.plot_eps_ncluster(matrix, ntot=10, min_samples=6)
 [![plot_eps_clusters.jpg](https://s17.postimg.org/g6n1cmqof/plot_eps_clusters.jpg)](https://postimg.org/image/bkqx4a557/)
 [![plot_eps_not_clustered.jpg](https://s17.postimg.org/oowhgzkcf/plot_eps_not_clustered.jpg)](https://postimg.org/image/9sxy9e8xn/)
 
-The function **run_cluster** uses the DBSCAN implemented in **sklearn**.
+The function **run_cluster** uses the DBSCAN implemented in **sklearn**. 
+You can find the documentation here: http://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html
 
 ```python
 result = wc.run_cluster(0.3,6, matrix)
