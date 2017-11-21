@@ -55,11 +55,14 @@ wc.plot_hist(df)
 [![sa](https://latex.codecogs.com/gif.latex?S_A)
 
 #### DISTANCE
-Given two different words (A and B) with associated two lists of synonyms ([![sa](https://latex.codecogs.com/gif.latex?S_A)  and $$S_B$$). A is equal to B if $S_A$ is equal to $S_B$. A is totally different from B if there is an empty intersection between $$S_A$$ and $$S_B$$.
+Given two different words (A and B) with associated two lists of synonyms ( ![sa](https://latex.codecogs.com/gif.latex?S_A)  and ![sb](https://latex.codecogs.com/gif.latex?S_B)). A is equal to B if ![sa](https://latex.codecogs.com/gif.latex?S_A) is equal to ![sb](https://latex.codecogs.com/gif.latex?S_B). A is totally different from B if there is an empty intersection between ![sa](https://latex.codecogs.com/gif.latex?S_A) and ![sb](https://latex.codecogs.com/gif.latex?S_B).
 
-### scriverlo in formula
+The formula we used is:
+
+![formula](https://latex.codecogs.com/gif.latex?%5Cfrac%7BS_A%20%5Ccap%20S_B%7D%7Bmin%28len%28S_A%29%2Clen%28S_B%29%29%7D)
 
 You can choose between min or max, or if you would like to use your definition of distance:
+
 ```python
     def mydistance_name():
         ...
