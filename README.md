@@ -39,7 +39,7 @@ df = wc.get_synonyms_pandas()
 ```python
 wc.plot_hist(df)
 ```
-[![hist_all.jpg](https://s17.postimg.org/93f5wwqcv/hist_all.jpg)](https://postimg.org/image/tnjzve63v/)
+[![hist_all.jpg](https://s17.postimg.org/ngd79azu7/hist_all.jpg)](https://postimg.org/image/5dk4i33zf/)
 
 Using set_treshold you can repeat **get_synonyms_pandas** with a threshold
 
@@ -51,8 +51,7 @@ Using **plot_hist** you can check if in your list of words there are words with 
 ```python
 wc.plot_hist(df)
 ```
-[![hist_no_higher.jpg](https://s17.postimg.org/vs4cwii1b/hist_no_higher.jpg)](https://postimg.org/image/dcjvz43wr/)
-[![sa](https://latex.codecogs.com/gif.latex?S_A)
+[![hist_no_higher.jpg](https://s17.postimg.org/5qbioa1ov/hist_no_higher.jpg)](https://postimg.org/image/e8kysm87f/)
 
 #### DISTANCE
 Given two different words (A and B) with associated two lists of synonyms ( ![sa](https://latex.codecogs.com/gif.latex?S_A)  and ![sb](https://latex.codecogs.com/gif.latex?S_B)). A is equal to B if ![sa](https://latex.codecogs.com/gif.latex?S_A) is equal to ![sb](https://latex.codecogs.com/gif.latex?S_B). A is totally different from B if there is an empty intersection between ![sa](https://latex.codecogs.com/gif.latex?S_A) and ![sb](https://latex.codecogs.com/gif.latex?S_B).
