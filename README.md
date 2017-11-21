@@ -87,3 +87,6 @@ result = wc.run_cluster(0.3,6, matrix)
 wc.plot_cluster_k(matrix, 'contraddire')
 ```
 [![contraddire.jpg](https://s17.postimg.org/t9inwcbvz/contraddire.jpg)](https://postimg.org/image/fslpdh1kb/)
+
+
+I've done this class together with https://github.com/aborgher
