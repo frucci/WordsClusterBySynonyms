@@ -52,10 +52,10 @@ Using **plot_hist** you can check if in your list of words there are words with 
 wc.plot_hist(df)
 ```
 [![hist_no_higher.jpg](https://s17.postimg.org/vs4cwii1b/hist_no_higher.jpg)](https://postimg.org/image/dcjvz43wr/)
+[![sa](https://latex.codecogs.com/gif.latex?S_A)
 
 #### DISTANCE
-
-Given two different words (A and B) with associated two lists of synonyms ($S_A$ and $S_B$). A is equal to B if $S_A$ is equal to $S_B$. A is totally different from B if there is an empty intersection between $S_A$ and $S_B$.
+Given two different words (A and B) with associated two lists of synonyms ([![sa](https://latex.codecogs.com/gif.latex?S_A)  and $$S_B$$). A is equal to B if $S_A$ is equal to $S_B$. A is totally different from B if there is an empty intersection between $$S_A$$ and $$S_B$$.
 
 ### scriverlo in formula
 
