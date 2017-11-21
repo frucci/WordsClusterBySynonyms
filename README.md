@@ -124,7 +124,7 @@ df.head(10)
 ```python
 wc.plot_hist(df)
 ```
-![alt tag](https://ibb.co/ezJGNm)
+![img](https://ibb.co/ezJGNm)
 
 ```python
 df = wc.set_treshold(20, df)
