@@ -26,7 +26,7 @@ verbs = [
 verbs = pd.DataFrame(verbs)
 verbs.columns = ['verbs']
 ```
-WordsClusterBySynonyms requires a dataframe in which you have to specify the name of the target column and the language obviously.
+WordsClusterBySynonyms requires a dataframe in which you have to specify the name of the target column and the language.
 
 The first function inside **WordClusterBySynonyms** is **get_synonyms_pandas**. It applies on the dataframe the generation of synonyms by creating a new columns.
 
@@ -41,7 +41,7 @@ wc.plot_hist(df)
 ```
 [![hist_all.jpg](https://s17.postimg.org/ngd79azu7/hist_all.jpg)](https://postimg.org/image/5dk4i33zf/)
 
-Using set_threshold you can repeat **get_synonyms_pandas** with a threshold
+Using set_threshold you can repeat **get_synonyms_pandas** with a threshold on the number of synonyms for each word.
 
 ```python
 df = wc.set_threshold(20, df)
@@ -54,11 +54,11 @@ wc.plot_hist(df)
 [![hist_no_higher.jpg](https://s17.postimg.org/5qbioa1ov/hist_no_higher.jpg)](https://postimg.org/image/e8kysm87f/)
 
 #### DISTANCE
-Given two different words (A and B) with associated two lists of synonyms ( ![sa](https://latex.codecogs.com/gif.latex?S_A)  and ![sb](https://latex.codecogs.com/gif.latex?S_B)). A is equal to B if ![sa](https://latex.codecogs.com/gif.latex?S_A) is equal to ![sb](https://latex.codecogs.com/gif.latex?S_B). A is totally different from B if there is an empty intersection between ![sa](https://latex.codecogs.com/gif.latex?S_A) and ![sb](https://latex.codecogs.com/gif.latex?S_B).
+Given two different words (A and B) with associated two lists of synonyms ( ![sa](https://latex.codecogs.com/gif.latex?S_A)  and ![sb](https://latex.codecogs.com/gif.latex?S_B)) A is equal to B if ![sa](https://latex.codecogs.com/gif.latex?S_A) is equal to ![sb](https://latex.codecogs.com/gif.latex?S_B). A is totally different from B if there is an empty intersection between ![sa](https://latex.codecogs.com/gif.latex?S_A) and ![sb](https://latex.codecogs.com/gif.latex?S_B).
 
 The formula we used is:
 
-![formula](https://latex.codecogs.com/gif.latex?%5Cfrac%7BS_A%20%5Ccap%20S_B%7D%7Bmin%28len%28S_A%29%2Clen%28S_B%29%29%7D)
+![formula](https://latex.codecogs.com/gif.latex?D%28A%2CB%29%20%3D%20%5Cfrac%7Blen%28S_A%20%5Ccap%20S_B%29%7D%7Bmin%28len%28S_A%29%2Clen%28S_B%29%29%7D)
 
 You can choose between min or max, or if you would like to use your definition of distance:
 
@@ -82,11 +82,13 @@ You can find the documentation here: http://scikit-learn.org/stable/modules/gene
 ```python
 result = wc.run_cluster(0.3,6, matrix)
 ```
+Below a plot to show the cluster using a *wordcloud-like* format, where for a smaller size correnspond a lower distance.
 
 ```python
 wc.plot_cluster_k(matrix, 'contraddire')
 ```
 [![contraddire.jpg](https://s17.postimg.org/t9inwcbvz/contraddire.jpg)](https://postimg.org/image/fslpdh1kb/)
 
+This class seems to work better for verbs and adjectives, but in general the goodness of this method is crucial correlated to the "goodness" of synonyms' structure.
 
 I've done this class together with https://github.com/aborgher
