@@ -121,6 +121,28 @@ df = wc.get_synonyms_pandas()
 df.head(10)
 ```
 
-```
+```python
 wc.plot_hist(df)
+```
+
+```python
+df = wc.set_treshold(20, df)
+df.head(10)
+```
+
+```python
+wc.plot_hist(df)
+```
+
+```python
+matrix = wc.create_distance_matrix(criteria=min, verbose=True)
+wc.plot_eps_ncluster(matrix, ntot=10, min_samples=6)
+```
+
+```python
+result = wc.run_cluster(0.3,6, matrix)
+```
+
+```python
+wc.plot_cluster_k(matrix, 'contraddire')
 ```
