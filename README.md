@@ -41,10 +41,10 @@ wc.plot_hist(df)
 ```
 [![hist_all.jpg](https://s17.postimg.org/ngd79azu7/hist_all.jpg)](https://postimg.org/image/5dk4i33zf/)
 
-Using set_treshold you can repeat **get_synonyms_pandas** with a threshold
+Using set_threshold you can repeat **get_synonyms_pandas** with a threshold
 
 ```python
-df = wc.set_treshold(20, df)
+df = wc.set_threshold(20, df)
 ```
 Using **plot_hist** you can check if in your list of words there are words with associate a huge number of synonyms. These words are a problem, because of our definition of distance they tend to create few huge cluster.
 
