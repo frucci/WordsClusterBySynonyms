@@ -1,7 +1,7 @@
 # WordsClusterBySynonyms
 Words clustering using synonyms 
 
-This class is able to create cluster by using the definition of synonyms inside NLTK. Let's see an example.
+This class is able to create clusters by using the definition of synonyms inside NLTK. Let's see an example.
 
 ```python
 import pandas as pd
